@@ -1,0 +1,46 @@
+---
+title: "Assignment 1: Introduction"
+author: Maeve Gualtieri-Reed
+output: pdf_document
+---
+
+## OVERVIEW
+
+This exercise accompanies the introductory material in Environmental Data Analytics. 
+
+## Directions
+1.  Rename this file `<FirstLast>_A01_Introduction.Rmd` (replacing `<FirstLast>` with your first and last name).
+2.  Change "Student Name" on line 3 (above) with your name.
+3.  Work through the steps, **creating code and output** that fulfill each instruction.
+4.  Be sure to **answer the questions** in this assignment document.
+5.  When you have completed the assignment, **Knit** the text and code into a single PDF file.
+6.  After Knitting, submit the completed exercise (PDF file) to the appropriate assignment section on Canvas.
+
+
+## 1) Discussion Questions
+Enter answers to the questions just below the >Answer: prompt.
+
+1. What are your previous experiences with data analytics, R, and Git? Include both formal and informal training.
+
+> Answer: 
+I have used R in undergraduate biology courses. I do not have experience with Git. In my previous job, I used event attendee demographic and feedback data to create graphics, pull numbers, and compare with archival data. I facilitated discussions with event planning staff to consider how are events were serving out audience, what was missing, and some key areas for imporvement. It was also used for grant reporting and board meeting presentations. I was not using statistical data analysis- just consolidating data in tables and graphs. 
+
+2. Are there any components of the course about which you feel confident?
+
+> Answer: 
+I took a few computer science courses in undergrad (python and java) so I feel like I have a foundation to learn R.
+
+3. Are there any components of the course about which you feel apprehensive?
+
+> Answer: 
+Coding can be so tedious so just juggling other coursework while writing and correcting code in this course.
+
+## 2) GitHub
+
+Provide a link below to your forked course repository in GitHub. Make sure you have pulled all recent changes from the course repository and that you have updated your course README file, committed those changes, and pushed them to your GitHub account. 
+
+> Answer: 
+https://github.com/maevegr
+
+## 3) Knitting
+When you have completed this document, click the `knit` button.This should produce a PDF copy of your markdown document. Submit this PDF to Canvas 
