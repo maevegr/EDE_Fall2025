@@ -37,9 +37,10 @@ Add comments below that specify what kind of vectors are created. (First answer 
 # Vectors ----
 vector1 <- c(1,2,5.3,6,-2,4) # Vector type: Numeric
 vector1
+
 class(vector1)
 
-vector2 <- c("one","two","three") # Vector type: 
+vector2 <- c("one","two","three")# Vector type: 
 vector2
 
 vector3 <- c(TRUE,TRUE,TRUE,FALSE,TRUE,FALSE) # Vector type:
@@ -84,15 +85,17 @@ Find a 5-day forecast of temperatures (Fahrenheit) for Durham, North Carolina. C
 
 #Assign to the variable 'temps_F' a vector of high temperatures in F
 
+temps_F <- c(80, 81, 83, 83, 77)
 
 #What is the average of these temperatures 
-
+mean(temps_F)
+average <-(mean(temps_F))
 
 #Compute the difference between each temperature and the average calculated above
 
-
+temps_F - average
 #Subtract 32 and multiply by 5/9ths to create a vector in Celsius
-
+temps_C <- ((temps_F-32)*(5/9))
 
 ```
 
@@ -163,6 +166,7 @@ matrix4['R2','C1']
 ### Exercise 1b: Matrices
 Compute the mean of column "C2" in matrix4. (Should be 14.5)
 ```{r Matrix Exercise}
+mean(matrix4[ ,'C2'])
 
 ```
 
