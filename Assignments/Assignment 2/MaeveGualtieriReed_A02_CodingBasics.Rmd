@@ -32,7 +32,8 @@ This exercise accompanies the lessons/labs in Environmental Data Analytics on co
 
 ```{r basics 1}
 #1. 
-ByFives <- seq(1, 55, 5) #1 is the start, 55 is the end, 5 is the increment. Assigns to the vector "ByFives"
+ByFives <- seq(1, 55, 5) #1 is the start, 55 is the end, 5 is the increment. 
+#Assigns to the vector "ByFives"
 
 #2. 
 mean(ByFives) #returns 26 as the mean of the vector
@@ -57,7 +58,8 @@ StudentNames <- c("Maeve", "Eric", "Liz", "Tom") #Vector tyep: string
 TestScores <- c(79, 89, 85, 92 ) #vector type: numeric
 Scholarship <- c(TRUE, FALSE, FALSE, TRUE) #vector type: boolean
 NamesDf<- as.data.frame(StudentNames) #converts the student names to data frame
-StudentScores <-cbind(NamesDf,TestScores,Scholarship) #adds test scores and scholarship as columns to the data frame
+StudentScores <-cbind(NamesDf,TestScores,Scholarship) #adds 
+#test scores and scholarship as columns to the data frame
 colnames(StudentScores) <- c("Names", "Test scores", "On scholarship?") #labels columns
 ```
 
