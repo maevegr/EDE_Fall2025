@@ -84,19 +84,22 @@ PassOver50<-function(input){
   }
 
 #11. Create a function using ifelse()
-
+PassIfElse <- function(input){
+  ifelse(input>50, "Pass", "Fail")
+}
 #12a. Run the first function with the value 52.5
-
+PassOver50(52.5) #Pass
 #12b. Run the second function with the value 52.5
-
+PassIfElse(52.5) #Pass
 #13a. Run the first function with the vector of test scores
-
+#PassOver50(TestScores) #Error in if (input > 50) { : the condition has length > 1
 #13b. Run the second function with the vector of test scores
+PassIfElse(TestScores) #[1] "Pass" "Pass" "Pass" "Pass"
 ```
 
 14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
 
-> Answer:
+> Answer:ifelse worked because the function could operate on the whole vector and return values for each individual element in the vector. if can only take one value, so it returned an error since the input was a vector with multiple values.
 
 
 **NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
