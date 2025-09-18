@@ -3,6 +3,8 @@ title: "3: Data Exploration"
 author: "Environmental Data Analytics | John Fay & Luana Lima"
 date: "Fall 2025"
 output: pdf_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Lesson Objectives
@@ -16,7 +18,7 @@ output: pdf_document
 
 Why is data exploration our first step in analyzing a dataset? What information do we gain? How does data exploration aid in our decision-making for data analysis steps further down the pipeline?
 
->Answer: 
+>Answer: Need to make sure we understand what the data is made up of. Both for logistical purposes of manipulating data and also so we are using the correct data to learn about the data set.
 
 ---
 
@@ -25,23 +27,30 @@ Why is data exploration our first step in analyzing a dataset? What information 
 ```{r, Setup-Import-Explore, message = FALSE}
 ## -Set up-
 # 1. Load packages (tidyverse, here)
-
+library(tidyverse)
+library(here)
 # 2. Check the working directory
-
+getwd()
+here()
 # 3. Import datasets
-
+USGS.flow.data <- read.csv(
+  file = here('Data/Processed/USGS_Site02085000_Flow_Processed.csv'), 
+  stringsAsFactors = TRUE,
+  colClasses = c('site_no' = 'factor')
+)
 ## -Initial Exploration-
 
 #View(USGS.flow.data)
 # Alternate option: click on data frame in Environment tab
 
 #View column names and the structure of the dataset
-
+colnames(USGS.flow.data)
+str(USGS.flow.data)
 # Check our date column: is it a date object?
-
+class(USGS.flow.data$datetime)
 # Change it to a date object and confirm
-
-
+USGS.flow.data$datetime <- as.Date(USGS.flow.data$datetime, format = '%Y-%m-%d')
+class(USGS.flow.data$datetime)
 ```
 
 ---
@@ -149,7 +158,7 @@ ggplot(USGS.flow.data) +
 
 Question: under what circumstances would it be beneficial to use each of these graph types (bar plot, histogram, frequency polygon, box-and whisker, violin, scatterplot)?
 
-> Answer: 
+> Answer: bar plot - using categorical data; histogram - looking at frequencies of various numerical data points; frequency polygon - histogram but layering multiple data; box-and-whisker - looking at how the data relates to itself; scatterplot - comparing two variables
 
 ## Ending discussion
 What did you learn about the USGS discharge dataset today? What separate insights did the different graph types offer?
