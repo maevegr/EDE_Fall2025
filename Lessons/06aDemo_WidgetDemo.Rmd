@@ -1,0 +1,15 @@
+---
+title: Interactive Rmd
+output: html_document
+runtime: shiny #this is what removes the knit option; interactive widgets
+---
+  
+```{r, echo = FALSE}
+numericInput("n", #defines a widget- interface
+"How many cars?", 5)
+
+renderTable({ #runs when n changes
+head(cars, input$n) #cars is a built in dataframe. then return n rows. input is just any interface
+})
+```
+
