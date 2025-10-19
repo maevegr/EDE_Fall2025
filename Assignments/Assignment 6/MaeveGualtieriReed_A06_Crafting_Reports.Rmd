@@ -5,6 +5,7 @@ date: "Fall 2025"
 output: pdf_document
 toc: True
 ---
+\listoffigures
 
 ## Objectives:
 
@@ -46,7 +47,7 @@ Table: EPA Air Quality
 
 Set the following R code chunk so that it runs when knit, but no messages, errors, or any output is shown. The code itself, however, should be displayed.
 
-```{r project.setup, echo = TRUE, results = "hide", include = TRUE}
+```{r project.setup, echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
 #Import libraries
 library(tidyverse)
 library(lubridate)
@@ -120,14 +121,17 @@ Ozone_2018 <- epa_data %>%
   filter(Year == 2018)%>%
   ggplot( 
     aes(
-      x=factor(Month,levels = 1:12,labels = month.abb),
-      y = Ozone
+      
+      #change month data from int to factor and label by corresponding month 
+      #name
+      x=factor(Month,levels = 1:12,labels = month.abb), #x value
+      y = Ozone #y value
     )
   )+
-  xlab("Month")+
-  ylab("Concentration")+
-  ggtitle("2018 Ozone Concentration by Month")+
-  geom_boxplot()
+  xlab("Month")+ #x axis label
+  ylab("Concentration")+ #y axis label
+  ggtitle("2018 Ozone Concentration by Month")+ #plot title
+  geom_boxplot() #boxplot
 Ozone_2018
 
   
@@ -138,7 +142,7 @@ Ozone_2019 <- epa_data %>%
   filter(Year == 2019)%>%
   ggplot( 
     aes(
-      x=factor(Month,levels = 1:12,labels = month.abb),
+      x=factor(Month,levels = 1:12,labels = month.abb), 
       y = Ozone
     )
   )+
@@ -157,4 +161,8 @@ Ozone_2019
 
 Add a table of contents and list of figures to your document and knit to a PDF. Submit your PDF to Sakai, but also be sure to commit and push your Rmd file used to create this knit document to GitHub. In the section below, add a link to your GitHub repository. **Lastly, add the statement that you did not use AI in the completion of this assignment followed by your name and the date.** 
 
+I did not use AI in the completion of this assignment.
+Maeve Gualtieri-Reed 10/19/2025
+
 ## Git Repository
+https://github.com/maevegr/EDE_Fall2025
